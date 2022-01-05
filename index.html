@@ -13,15 +13,64 @@
             <h1>SubIT 技术课展示</h1>
             <p>经过一个学段的教学和开发，同学们提交了自己的个人页面项目。现开放供投票！</p>
         </div>
-        <div class="end">
+        <div class="flex end" style="flex-direction: column;">
             <div class="huge-card">
                 <h1 class="huge-text">28</h1>
                 <span class="huge-desc">部作品</span>
-                <img src="./assets/photo.jpg" alt="" style="max-width:calc(100% + 40px);margin: 15px -20px -24px">
+                <img src="./assets/photo.jpg" id="photo" alt="" style="max-width:calc(100% + 40px);margin: 15px -20px -24px">
             </div>
             <a href="https://pkuschool.github.io/SubIT/" class="extlink">了解 SubIT 社团</a>
         </div>
     </div>
-    <div class="right"></div>
+    <div class="right">
+        <h1 id="featured">优秀</h1>
+        <div class="card-container">
+            <div class="card" onclick="toggleWebModal()">
+                <img src="./assets/siteshots/guopengfei.png" alt="">
+            </div>
+            <div class="card">
+                <h1>Two</h1>
+            </div>
+            <div class="card">
+                <h1>Three</h1>
+            </div>
+            <div class="card">
+                <h1>Four</h1>
+            </div>
+            <div class="card">
+                <h1>Five</h1>
+            </div>
+        </div>
+    </div>
+    <div class="webframe">
+        <div class="actual-frame">
+            <div class="navbar">
+                <!-- <span class="addr"></span> -->
+                <div class="width-toggle btn" onclick="toggleFrameWidth(390)">390px</div>
+                <div class="width-toggle btn" onclick="toggleFrameWidth(768)">768px</div>
+                <div class="width-toggle btn" onclick="toggleFrameWidth(900)">900px</div>
+                <div class="width-toggle btn" onclick="toggleFrameWidth(1000)">1000px</div>
+                <div class="width-toggle btn" onclick="toggleFrameWidth(-1)">default</div>
+                <div class="close-btn" onclick="toggleWebModal()">&times;</div>
+            </div>
+            <iframe src="https://pkuschool.github.io/SubIT/index.html" frameborder="0"></iframe>
+        </div>
+    </div>
+    <script>
+        function toggleWebModal(){
+            document.querySelector('.webframe').classList.toggle('hidden');
+        }
+        function toggleFrameWidth(setWidth){
+            if(setWidth != -1){
+                document.querySelector('.actual-frame').style.width = setWidth + 'px';
+            }else{
+                document.querySelector('.actual-frame').attributes.removeNamedItem('style');
+            }
+        }
+        // setInterval(function(){
+        //     document.querySelector(".addr").innerText = document.querySelector('iframe').src;
+        //     console.log(document.querySelector('iframe').src)
+        // }, 500)
+    </script>
 </body>
 </html>
