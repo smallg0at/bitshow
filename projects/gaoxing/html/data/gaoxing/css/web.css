@@ -1,0 +1,40 @@
+div.web{
+    background-color: #FFCCCC;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 250px;
+    height: 230px;
+    padding: 10px;
+}
+div.box2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+div.box3{
+    display: flex;
+}
+.box3 .web{
+    margin: 5px;
+}
+.web h3{
+    font-weight: normal;
+    display: block;
+    padding: 8px 0;
+    margin: 0 0 10px 0;
+    /* text-align: left !important; */
+    
+}
+.web h3 a{
+    border-bottom: 3px solid #ffffff01;
+    transition: all .25s;
+
+}
+.web h3 a:hover{
+    border-bottom-color: black;
+    font-weight: bold;
+}
+
+a{
+    color: black;
+}

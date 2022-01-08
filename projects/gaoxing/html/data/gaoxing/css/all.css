@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+}
+h1{
+    color:rgb(79, 104, 172);
+    font-weight: bold;
+    font-size: 28px;
+}
+h2.main{
+    display: inline;
+}
+a{
+    text-decoration: none;
+} 
+div.box{   
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 0px 10px 10px;
+    width:55%;
+    margin: 20px auto;
+    background-color: #f3f3f3;
+}
+@media screen and (max-width: 900px){
+    div.box{
+        width: 80%;
+    }
+}
+div.link{
+    width: 7000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.goto{
+    background-color: white;
+    border-radius: 2px;
+    height: 40px;
+    width: 100px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 17px;
+}
+div.box0{
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    align-items: center;
+    background-color: rgb(37, 34, 34);
+}
+div.title{
+    width: 6000px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+}
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(249, 249, 250);
+}
+p.footer{
+    font-size: 15px;
+    color: black;
+}
+div.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.goto:hover{
+    background-color:rgb(99, 182, 230) ;
+}
+a.main{
+    color: white;
+}
+div.else{
+    height: 20px;
+}
+div.line{
+    height:15px;
+    width: 1px;
+    background-color: black;
+    margin: 5px;
+}
+a.just:hover{
+    font-weight: bold;
+}
+#line{
+    height:1px;
+    width: 100%;
+    border-top: 1px solid #cfc8c8;
+}

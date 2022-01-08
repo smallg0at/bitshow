@@ -1,0 +1,12 @@
+.imgbox {
+    /* 避免因窗口变化影响图片效果 */
+    width: 90%;
+    /* height: 40%; */
+    margin: 0 auto;
+}
+.img {
+    width: 90%;
+    /* height: 50%; */
+    margin: 0 auto;
+    display: none;
+}

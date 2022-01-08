@@ -1,0 +1,12 @@
+#part1{
+    background-color: #FFCCCC;
+    padding: 10px;
+    margin:0 auto;
+    width: 90%;
+    border-radius: 5px;
+    border:1.5px solid black;
+}
+img{
+    width: 216px;
+    height: 480px;
+}

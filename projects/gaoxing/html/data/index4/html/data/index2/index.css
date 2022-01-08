@@ -1,0 +1,16 @@
+#part{
+    background-color: rgb(47, 131, 209);
+    height:200px;
+    width: 300px;
+}
+h1{
+    color:green;
+    font-weight: bold;
+}
+#box{
+    border-radius: 5px;;
+    border: 5px solid black;
+}
+#part,#picture{
+    float:left;
+}

@@ -1,0 +1,28 @@
+div.box3{
+    background-color: #FFCCCC;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 250px;
+    height: 230px;
+    padding: 10px;
+}
+div.part{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+div.box2{
+    display: flex;
+}
+.box3{
+    margin: 5px;
+}
+a.data{
+    font-weight: normal;
+}
+a.data:hover{
+    font-weight: bold;
+}
+a.data{
+    color: black;
+}

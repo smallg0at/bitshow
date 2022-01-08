@@ -1,0 +1,16 @@
+div.box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.box3{
+    border: 1px solid black;
+    width: 230px;
+    height: 200px;
+    padding: 10px;
+    background-color: #b0c4de;
+}
+img{
+    width: 200px; 
+    height: 200px;
+}

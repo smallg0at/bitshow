@@ -1,0 +1,25 @@
+div.web{
+    background-color: #FFCCCC;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 250px;
+    height: 230px;
+    padding: 10px;
+}
+div.box2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+div.box3{
+    display: flex;
+}
+h3{
+    font-weight: normal;
+}
+a.data:hover{
+    font-weight: bold;
+}
+a{
+    color: black;
+}

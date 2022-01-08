@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片轮播——Gx</title>
+    <link type="text/css" rel="stylesheet" href="../css/picture.css">
+    <link rel="stylesheet" href="../css/all.css"
+</head>
+<body>
+    <div class="box0">
+        <div class="box8">
+            <div class="title"><h1>欢迎来到我的个人博客</h1></div>
+            <div class="link">
+                <a href="index.htm"><div class="goto"><p id="main">主页</p></div></a>
+                <a href="introduction/introduction.htm"><div class="goto"><p id="main">关于</p></div></a>
+                <a href="web.htm"><div class="goto"><p id="main">神秘礼物</p></div></a>
+                <a href="data/progress.htm"><div class="goto"><p id="main">更新日志</p></div></a>
+            </div>            
+        </div>
+        <div class="box9">
+            <div class="title"><h1>&nbsp;</h1></div>
+            <div class="link1">
+                <div class="goto2" style="background-color:rgb(30, 160, 255)"><a href="picture.htm"><div>向往的生活</div></a></div>
+                <div class="goto1">
+                    <a href="introduction/goto/blog.htm"><div class="goto2">积累</div></a>
+                    <a href="introduction/goto/game.htm"><div class="goto2">游戏</div></a>
+                    <a href="introduction/goto/python.htm"><div class="goto2">Python</div></a>
+                </div>
+                <div class="goto3"><a></a></div>
+                <div class="goto3"><a></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="else"></div>
+    <div class="box">
+        <div class="box1">
+            <div class="else"></div>
+            <div class="imgBox">
+                <img class="img-slide img" src="../picture/lb1.jpg">
+                <img class="img-slide img" src="../picture/lb2.jpg">
+                <img class="img-slide img" src="../picture/lb3.jpg">
+                <img class="img-slide img" src="../picture/lb4.jpg">
+                <img class="img-slide img" src="../picture/lb5.jpg">
+                <img class="img-slide img" src="../picture/lb6.jpg">
+                <img class="img-slide img" src="../picture/lb7.jpg">
+                <img class="img-slide img" src="../picture/lb8.jpg">
+                <img class="img-slide img" src="../picture/lb9.jpg">
+                <img class="img-slide img" src="../picture/lb10.jpg">
+                <img class="img-slide img" src="../picture/lb11.jpg">
+                <img class="img-slide img" src="../picture/lb12.jpg">
+                <img class="img-slide img" src="../picture/lb13.jpg">
+                <img class="img-slide img" src="../picture/lb14.jpg">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <a href="copyright.htm" class="just"><div><p class="footer">版权声明</p></div></a>
+            <div class="line"></div>
+            <a href="thanks.htm" class="just"><div><p class="footer">感谢观看</p></div></a>            
+        </div>
+        <div class="space"><p>&nbsp;</p></div>
+        <p class="footer">最后更新于2022.1.5</p>
+    </footer>
+</body>
+
+<script type="text/javascript">
+    var index = 0, len;
+    var imgBox = document.getElementsByClassName("img-slide");
+    len = imgBox.length;
+    imgBox[index].style.display = 'block';
+    // 逻辑控制函数
+    function slideShow() {
+        index ++;
+        // 防止数组溢出
+        if(index >= len) index = 0;
+        // 遍历每一个元素
+        for(var i=0; i<len; i++) {
+            imgBox[i].style.display = 'none';
+        }
+        // 每次只有一张图片显示
+        imgBox[index].style.display = 'block';
+    }
+    // 定时器，间隔3s切换图片
+    setInterval(slideShow, 3000);
+</script>
+</html>

@@ -1,0 +1,15 @@
+p.word{
+    font-size: 70px;
+    font-family:STFangsong;
+}
+div.box2{
+    width: 90px;
+}
+div.box3{
+    width: 90px;
+
+}
+div.box1{
+    display: flex;
+    justify-content: space-evenly;
+}
