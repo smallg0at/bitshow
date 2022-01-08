@@ -1,0 +1,18 @@
+[
+    {
+        "name": "郭鹏飞",
+        "url": "https://RedStoneGuo.github.io/RsGuoIntro",
+        "img": "./assets/siteshots/guopengfei.png"
+    },
+    {
+        "name": "康家鸣",
+        "url": "https://kang-jiaming.github.io/Self-Introduction/",
+        "img": "./assets/siteshots/kangjiaming.png"
+    },
+    {
+        "name": "高兴",
+        "url": "./projects/gaoxing/html/index.htm",
+        "img": "./assets/siteshots/gaoxing.png",
+        "loc": 4565
+    }
+]
