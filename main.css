@@ -54,7 +54,7 @@ p{
     color: #0071d4;
     overflow: hidden;
     /* max-width: 500px; */
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 /* .huge-card p{
     margin: 15px 0 0;
@@ -101,7 +101,7 @@ p{
     grid-template-columns: 1fr 1fr;
     gap: 15px 15px;
     max-width: calc(100%);
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .card{
@@ -287,8 +287,14 @@ p{
         display: none;
     }
 }
+#mobile-warn{
+    display: none;
+}
 @media (max-width: 600px){
     .card-container{
         grid-template-columns: 1fr;
+    }
+    #mobile-warn{
+        display: block !important;
     }
 } 
