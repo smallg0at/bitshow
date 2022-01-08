@@ -40,8 +40,8 @@ function renderList(){
             openTargetedFrame(item.url)
         }
         newElement.classList.add('card')
-        newElement.attributes['role'] = 'button'
-        newElement.attributes['tabindex'] = '0'
+        newElement.setAttribute('role', 'button')
+        newElement.setAttribute('tabindex', '0')
         newElement.innerHTML = `<img src="${item.img}" alt="">
         <span class="imglabel" title="代码行数">
             <span class="main">${item.name}</span>

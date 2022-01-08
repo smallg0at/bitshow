@@ -35,7 +35,7 @@
                 眼花缭乱不知道该选哪个？
             </span>
             
-            <div class="button" id="random">随机打开一个</div>
+            <div class="button" id="random" tabindex="0">随机打开一个</div>
         </div>
         <div class="huge-card flex" id="mobile-warn" style="justify-content: space-between;flex-wrap: wrap;">
             <span style="line-height: 40px;font-size: 22px;">
@@ -60,9 +60,9 @@
                 <div class="width-toggle btn" onclick="toggleFrameWidth(900)">900px</div>
                 <div class="width-toggle btn" onclick="toggleFrameWidth(1000)">1000px</div>
                 <div class="width-toggle btn" onclick="toggleFrameWidth(-1)">适应屏幕</div>
-                <div class="close-btn" onclick="toggleWebModal()">&times;</div>
+                <div class="close-btn" onclick="toggleWebModal()" tabindex="1">&times;</div>
             </div>
-            <iframe src="about:blank" frameborder="0"></iframe>
+            <iframe src="about:blank" frameborder="0" tabindex="1"></iframe>
         </div>
     </div>
     <script src="main.js"></script>

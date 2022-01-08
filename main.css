@@ -94,6 +94,10 @@ p{
 .extlink:hover{
     background-color: #3a8cd4;
 }
+.extlink:focus{
+    outline: 2px solid #ffffff;
+    box-shadow: 0px 0px 10px #0071d4;
+}
 
 
 .card-container{
@@ -115,7 +119,11 @@ p{
     position: relative;
 }
 .card:hover{
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+}
+.card:focus{
+    outline: 2px solid #0071d4;
+    box-shadow: 0px 0px 10px #0071d4;
 }
 .card img{
     width: 100%;
@@ -188,6 +196,11 @@ p{
 .btn:hover, .close-btn:hover{
     border-top-color: white;
 }
+.close-btn:focus{
+    border-top: 5px solid #0071d4 !important;
+    color: #0071d4;
+    outline: none;
+}
 .close-btn{
     margin-left: auto;
     padding: 0 10px;
@@ -210,6 +223,13 @@ p{
     width: auto;
     cursor: pointer;
     user-select: none;
+    transition: .25s all;
+}
+.button:hover{
+    filter: brightness(0.95);
+}.button:focus{
+    outline: 1px solid #0071d4;
+    box-shadow: 0px 0px 10px #0071d4;
 }
 .imglabel{
     position: absolute;
