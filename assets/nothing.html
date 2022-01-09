@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空白页 | 技术课项目展示</title>
+    <style>
+        body{
+            max-width: max(calc(100vw - 100px), 90vw);
+            margin: 4em auto;
+            background-color: rgb(31, 31, 31);
+            color: rgba(255, 255, 255, 0.616);
+            text-align: center;
+        }
+        @keyframes spin{
+            0%{
+                transform: rotate(0deg);
+            }
+            /* 50%{
+                transform: rotate(180deg);
+            } */
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        #roll{
+            animation: spin 0.05s infinite linear;
+        }
+    </style>
+</head>
+<body>
+    <img src="./ringdots.svg" id="roll" alt="" width="100" style="margin-bottom: 40px;">
+    <h1>页 面 正 在 加 载</h1>
+    <p style="line-height: 2;">所以这个页面存在的意义就是为了防止你不小心被 rickroll 然后关闭模态框之后发现还在发出那经典的声音</p>
+</body>
+</html>

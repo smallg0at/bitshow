@@ -82,6 +82,11 @@ retrieveAndApplyData()
 //     console.log(document.querySelector('iframe').src)
 // }, 500)
 
+document.querySelector('.close-btn').onclick = ()=>{
+    toggleWebModal();
+    document.querySelector('iframe').src = "./assets/nothing.html"
+}
+
 document.onkeydown = function(e) {
     if(e.key === "Enter") { // The Enter/Return key
       document.activeElement.onclick(e);
