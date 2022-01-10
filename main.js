@@ -68,6 +68,14 @@ function toggleFrameWidth(setWidth){
 function openRandomWebsite(){
     openTargetedFrame(currentDisplayedListData[Math.round(Math.random()*1000)%currentDisplayedListData.length].url)
 }
+function openCurrentFrameSrc(){
+    document.querySelector('iframe').classList.add('expand')
+    setTimeout(()=>{
+
+        window.open(document.querySelector('iframe').src, '_blank', "")
+        document.querySelector('iframe').classList.remove('expand')
+    },200)
+}
 function openTargetedFrame(url){
     document.querySelector('iframe').src = url;
     toggleWebModal();
