@@ -76,9 +76,10 @@ function openCurrentFrameSrc(){
         document.querySelector('iframe').classList.remove('expand')
     },200)
 }
-function openTargetedFrame(url){
+function openTargetedFrame(url, noFullscreen = false){
     document.querySelector('iframe').src = url;
     toggleWebModal();
+    if(noFullscreen == false){document.querySelector('.actual-frame').requestFullscreen()}
 }
 document.querySelector('#random').onclick = (e)=>{
     openRandomWebsite()
@@ -92,11 +93,12 @@ retrieveAndApplyData()
 
 document.querySelector('.close-btn').onclick = ()=>{
     toggleWebModal();
+    document.exitFullscreen();
     document.querySelector('iframe').src = "./assets/nothing.html"
 }
 
 document.onkeydown = function(e) {
     if(e.key === "Enter") { // The Enter/Return key
-      document.activeElement.onclick(e);
+      document.activeElement.onclick(e);;
     }
   };
