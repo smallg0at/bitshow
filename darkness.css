@@ -1,0 +1,21 @@
+@media screen and  (prefers-color-scheme: dark) {
+    body{
+        background-color: black;
+        color: #9cb8d1;
+    }
+    .left, .left.collapse::after{
+        background-color: #004077;
+        color: #c9d7e4;
+    }
+    .huge-card{
+        background-color: rgb(26, 26, 26);
+        color: #9cb8d1;
+    }
+    .extlink:hover{
+        background-color: #ffffff3a;
+    }
+    iframe{
+        background-color: rgb(255, 255, 255) !important;
+        filter: brightness(0.9);
+    }
+}
