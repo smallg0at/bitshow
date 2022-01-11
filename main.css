@@ -395,6 +395,9 @@ iframe.expand{
     .width-toggle{
         display: none;
     }
+    .lefttoggle{
+        display: none;
+    }
 }
 #mobile-warn{
     display: none;

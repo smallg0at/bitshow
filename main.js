@@ -79,7 +79,7 @@ function openCurrentFrameSrc(){
 function openTargetedFrame(url, noFullscreen = false){
     document.querySelector('iframe').src = url;
     toggleWebModal();
-    if(noFullscreen == false){document.querySelector('.actual-frame').requestFullscreen()}
+    if(noFullscreen == false){document.querySelector('.webframe').requestFullscreen()}
 }
 document.querySelector('#random').onclick = (e)=>{
     openRandomWebsite()
