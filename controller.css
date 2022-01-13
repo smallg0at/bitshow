@@ -1,0 +1,47 @@
+*{
+    /* cursor: none !important; */
+}
+html.gamepad [padkey]::before{
+    content: attr(padkey);
+    display: inline-block;
+    background-color: lightblue;
+    color: black;
+    font-size: 18px;
+    /* width: 25px; */
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50px;
+    width: unset !important;
+    margin-right: 5px;
+    font-weight: bold;
+    font-family: consolas, monospace;
+    padding: 0 10px;
+}
+html.gamepad [padkey][padcolor=red]::before{
+    background-color: red;
+    color: white;
+}
+html.gamepad .extlink::before{
+    background-color: white;
+    color: #0071d4;
+}
+.btn[padkey]::before{
+    position: absolute;
+    right:-5px;
+    bottom: 0px;
+    transform: scale(0.7);
+}
+html.gamepad .padmouse{
+    position: fixed;
+    display: block !important;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    height: 15px;
+    width: 15px;
+    border: 1px white solid;
+    background-color: #009688;
+    z-index: 1000000;
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px black;
+}

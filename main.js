@@ -1,104 +1,207 @@
 var currentDisplayedListData = [
-    {
-        name: "waiting"
+  {
+    name: "waiting",
+  },
+];
+function retrieveAndApplyData() {
+  console.log("Retriving Data");
+  var httpobj = new XMLHttpRequest();
+  httpobj.onload = () => {
+    var resText = httpobj.responseText;
+    console.info(`Received Information, length is ${resText.length}`);
+    if (resText != JSON.stringify(currentDisplayedListData)) {
+      currentDisplayedListData = JSON.parse(resText);
+      renderList();
+    } else {
+      console.log();
     }
-]
-function retrieveAndApplyData(){
-    console.log("Retriving Data")
-    var httpobj = new XMLHttpRequest();
-    httpobj.onload = ()=>{
-        var resText = httpobj.responseText
-        console.info(`Received Information, length is ${resText.length}`)
-        if(resText != JSON.stringify(currentDisplayedListData)){
-            currentDisplayedListData = JSON.parse(resText)
-            renderList()
-        }else{
-            console.log()
-        }
-    }
-    httpobj.onabort = ()=>{
-        alert("连接因不明原因被终止。")
-        console.error("Connection Aborted")
-    }
-    httpobj.onerror = ()=>{
-        alert("连接出错。")
-        console.error("Connection Failed")
-    }
-    httpobj.ontimeout = ()=>{
-        alert("网络不佳，连接超时，无法获取数据。")
-        console.error("Network Timeout")
-    }
-    httpobj.open('GET', 'displaydata.json')
-    httpobj.send();
+  };
+  httpobj.onabort = () => {
+    alert("连接因不明原因被终止。");
+    console.error("Connection Aborted");
+  };
+  httpobj.onerror = () => {
+    alert("连接出错。");
+    console.error("Connection Failed");
+  };
+  httpobj.ontimeout = () => {
+    alert("网络不佳，连接超时，无法获取数据。");
+    console.error("Network Timeout");
+  };
+  httpobj.open("GET", "displaydata.json");
+  httpobj.send();
 }
-function renderList(){
-    var cardContainer = document.querySelector('.card-container')
-    cardContainer.innerHTML = "";
-    currentDisplayedListData.forEach((item)=>{
-        let newElement = document.createElement('div')
-        newElement.onclick = ()=>{
-            openTargetedFrame(item.url)
-        }
-        newElement.classList.add('card')
-        newElement.setAttribute('role', 'button')
-        newElement.setAttribute('tabindex', '0')
-        newElement.innerHTML = `<img src="${item.img}" alt="">
+function renderList() {
+  var cardContainer = document.querySelector(".card-container");
+  cardContainer.innerHTML = "";
+  currentDisplayedListData.forEach((item) => {
+    let newElement = document.createElement("div");
+    newElement.onclick = () => {
+      openTargetedFrame(item.url);
+    };
+    newElement.classList.add("card");
+    newElement.setAttribute("role", "button");
+    newElement.setAttribute("tabindex", "0");
+    newElement.innerHTML = `<img src="${item.img}" alt="">
         <span class="imglabel" title="代码行数">
             <span class="main">${item.name}</span>
-            <span class="loc">${item.loc||"不明"}</span>
-        </span>`
-        cardContainer.appendChild(newElement)
-    })
+            <span class="loc">${item.loc || "不明"}</span>
+        </span>`;
+    cardContainer.appendChild(newElement);
+  });
 }
 
-function toggleWebModal(){
-    document.querySelector('.webframe').classList.toggle('hidden');
+var isFrameActivated = false;
+
+function toggleWebModal() {
+  document.querySelector(".webframe").classList.toggle("hidden");
 }
-function toggleFrameWidth(setWidth){
-    if(setWidth != -1){
-        document.querySelector('.actual-frame').style.width = setWidth + 'px';
-        if(setWidth > window.innerWidth){
-            alert('你设置了比窗口更宽的宽度，可能无法正常反映网页状态。')
-        }
-    }else{
-        document.querySelector('.actual-frame').attributes.removeNamedItem('style');
+function toggleFrameWidth(setWidth) {
+  if (setWidth != -1) {
+    document.querySelector(".actual-frame").style.width = setWidth + "px";
+    if (setWidth > window.innerWidth) {
+      alert("你设置了比窗口更宽的宽度，可能无法正常反映网页状态。");
     }
+  } else {
+    document.querySelector(".actual-frame").attributes.removeNamedItem("style");
+  }
 }
 
-function openRandomWebsite(){
-    openTargetedFrame(currentDisplayedListData[Math.round(Math.random()*1000)%currentDisplayedListData.length].url)
+function openRandomWebsite() {
+  openTargetedFrame(
+    currentDisplayedListData[
+      Math.round(Math.random() * 1000) % currentDisplayedListData.length
+    ].url
+  );
 }
-function openCurrentFrameSrc(){
-    document.querySelector('iframe').classList.add('expand')
-    setTimeout(()=>{
+function openCurrentFrameSrc() {
+  document.querySelector("iframe").classList.add("expand");
+  setTimeout(() => {
+    window.open(document.querySelector("iframe").src, "_blank", "");
+    document.querySelector("iframe").classList.remove("expand");
+  }, 200);
+}
+function openTargetedFrame(url, noFullscreen = false) {
+  isFrameActivated = true;
+  document.querySelector("iframe").src = url;
+  toggleWebModal();
+  if (noFullscreen == false) {
+    document.querySelector(".webframe").requestFullscreen();
+  }
+}
+document.querySelector("#random").onclick = (e) => {
+  openRandomWebsite();
+};
 
-        window.open(document.querySelector('iframe').src, '_blank', "")
-        document.querySelector('iframe').classList.remove('expand')
-    },200)
-}
-function openTargetedFrame(url, noFullscreen = false){
-    document.querySelector('iframe').src = url;
-    toggleWebModal();
-    if(noFullscreen == false){document.querySelector('.webframe').requestFullscreen()}
-}
-document.querySelector('#random').onclick = (e)=>{
-    openRandomWebsite()
-}
-
-retrieveAndApplyData()
+retrieveAndApplyData();
 // setInterval(function(){
 //     document.querySelector(".addr").innerText = document.querySelector('iframe').src;
 //     console.log(document.querySelector('iframe').src)
 // }, 500)
 
-document.querySelector('.close-btn').onclick = ()=>{
-    toggleWebModal();
-    document.exitFullscreen();
-    document.querySelector('iframe').src = "./assets/nothing.html"
+function sleep(numberMillis) {
+  var now = new Date();
+  var exitTime = now.getTime() + numberMillis;
+  while (true) {
+    now = new Date();
+    if (now.getTime() > exitTime) return;
+  }
 }
 
-document.onkeydown = function(e) {
-    if(e.key === "Enter") { // The Enter/Return key
-      document.activeElement.onclick(e);;
+document.querySelector(".close-btn").onclick = () => {
+  toggleWebModal();
+  isFrameActivated = false;
+  document.exitFullscreen();
+  document.querySelector("iframe").src = "./assets/nothing.html";
+};
+
+var rightElement = document.querySelector(".right");
+
+function gamepadProcessLoop() {
+  var gamepads = navigator.getGamepads
+    ? navigator.getGamepads()
+    : navigator.webkitGetGamepads
+    ? navigator.webkitGetGamepads
+    : [];
+  if (!gamepads) {
+    return;
+  }
+  mainpad = gamepads[0];
+  let str0 = "";
+  mainpad.buttons.forEach((item, index) => {
+    if (item.pressed) {
+      str0 += index;
+      str0 += " ";
     }
-  };
+  });
+//   console.log(str0.length > 0 ? str0 : "");
+// console.log(document.querySelector('html').scrollTop)
+  if (mainpad.buttons[0].pressed) {
+    document.activeElement.click();
+  }
+  if (mainpad.buttons[1].pressed && isFrameActivated) {
+    document.querySelector(".close-btn").onclick();
+  }
+  if (mainpad.buttons[2].pressed && isFrameActivated) {
+    document.querySelector(".external").onclick();
+  }
+  if (mainpad.buttons[3].pressed && !isFrameActivated) {
+    document.querySelector("#random").click();
+  }
+  if (mainpad.buttons[9].pressed && !isFrameActivated) {
+    document.querySelector(".left").classList.toggle("collapse");
+    setTimeout(() => {
+      requestAnimationFrame(gamepadProcessLoop);
+    }, 300);
+    return;
+  }
+  if (!isFrameActivated) {
+    let buttonIsActivated = false;
+    if (mainpad.buttons[15].pressed) {
+      document.activeElement.nextElementSibling.focus();
+      buttonIsActivated = true;
+    }
+    if (mainpad.buttons[12].pressed){
+        document.querySelector("#subit").click();buttonIsActivated = true;
+    }
+    if (mainpad.buttons[13].pressed){
+        document.querySelector("#about").click();buttonIsActivated = true;
+    }
+    setTimeout(() => {
+      requestAnimationFrame(gamepadProcessLoop);
+    }, 100);
+    if(buttonIsActivated == true){
+        return;
+    }
+  }
+  //   detectAndChangeFocusInList(mainpad)
+  if (window.innerWidth <= 930) {
+      // console.log(document.querySelector('html').scrollTop)
+    document.querySelector('html').scrollTop =
+      ((Math.abs(mainpad.axes[3]) > 0.1) ? ((mainpad.axes[3]) ** 3) : 0) +
+      document.querySelector('html').scrollTop;
+      setTimeout(() => {
+        requestAnimationFrame(gamepadProcessLoop);
+      }, 5);
+      return;
+  } else {
+      // console.log(rightElement.scrollTop)
+    rightElement.scrollTop =
+      ((Math.abs(mainpad.axes[3]) > 0.1) ? ((mainpad.axes[3] ** 3)) : 0) +
+      rightElement.scrollTop;
+      setTimeout(() => {
+        requestAnimationFrame(gamepadProcessLoop);
+      }, 5);
+      return
+  }
+  next = requestAnimationFrame(gamepadProcessLoop);
+}
+
+addEventListener("gamepadconnected", () => {
+  gamepadProcessLoop();
+  document.documentElement.classList.add("gamepad");
+//   document.querySelector(".padmouse").style.top =
+//     document.querySelector(".padmouse").clientTop;
+//   document.querySelector(".padmouse").style.left =
+//     document.querySelector(".padmouse").clientLeft;
+});
