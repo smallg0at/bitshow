@@ -14,7 +14,7 @@ img{
     width: 200px; 
     height: 200px;
 }
-a:hover{
+a.just:hover{
     font-weight: bold;
 }
 .box3{
@@ -25,5 +25,5 @@ a{
 }
 .box0{
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
 }

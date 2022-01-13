@@ -15,5 +15,5 @@ a.just:hover{
 }
 .box0{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }

@@ -20,3 +20,7 @@ pre{
     width: 500px;
     height: 250px;
 }
+.box0{
+    display: flex;
+    justify-content: space-around;
+}

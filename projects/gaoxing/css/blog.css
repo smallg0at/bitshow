@@ -1,9 +1,6 @@
 a.just:hover{
     font-weight: bold;
 }
-div.link{
-    width: 4500px;
-}
 div.search{
     display: flex;
     justify-content: center;
@@ -49,13 +46,7 @@ div.content{
     vertical-align: middle;
     line-height: 50px;
 }
-div.link{
-    width: 7000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .box0{
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
 }

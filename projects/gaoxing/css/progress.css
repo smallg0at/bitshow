@@ -42,3 +42,9 @@ h3 a:hover{
     border-bottom-color: black;
     font-weight: bold;
 }
+@media screen and (min-width: 800px){
+    div.web{
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+}

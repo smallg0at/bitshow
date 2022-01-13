@@ -13,6 +13,7 @@ div.box2{
 }
 div.box3{
     display: flex;
+    max-width: 80%;
 }
 .box3 .web{
     margin: 5px;
@@ -34,4 +35,10 @@ div.box3{
 }
 a.data{
     color: purple;
+}
+@media screen and (min-width: 800px){
+    div.web{
+        margin-left: 200px;
+        margin-right: 200px;
+    }
 }
