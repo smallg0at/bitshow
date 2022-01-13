@@ -118,6 +118,7 @@ document.querySelector(".close-btn").onclick = () => {
 var rightElement = document.querySelector(".right");
 
 function gamepadProcessLoop() {
+  let buttonIsActivated = false;
   var gamepads = navigator.getGamepads
     ? navigator.getGamepads()
     : navigator.webkitGetGamepads
@@ -138,15 +139,19 @@ function gamepadProcessLoop() {
 // console.log(document.querySelector('html').scrollTop)
   if (mainpad.buttons[0].pressed) {
     document.activeElement.click();
+    buttonIsActivated = true;
   }
   if (mainpad.buttons[1].pressed && isFrameActivated) {
     document.querySelector(".close-btn").onclick();
+    buttonIsActivated = true;
   }
   if (mainpad.buttons[2].pressed && isFrameActivated) {
     document.querySelector(".external").onclick();
+    buttonIsActivated = true;
   }
   if (mainpad.buttons[3].pressed && !isFrameActivated) {
     document.querySelector("#random").click();
+    buttonIsActivated = true;
   }
   if (mainpad.buttons[9].pressed && !isFrameActivated) {
     document.querySelector(".left").classList.toggle("collapse");
@@ -156,20 +161,18 @@ function gamepadProcessLoop() {
     return;
   }
   if (!isFrameActivated) {
-    let buttonIsActivated = false;
+    
     if (mainpad.buttons[15].pressed) {
       document.activeElement.nextElementSibling.focus();
       buttonIsActivated = true;
     }
     if (mainpad.buttons[12].pressed){
         document.querySelector("#subit").click();buttonIsActivated = true;
+        buttonIsActivated = true;
     }
     if (mainpad.buttons[13].pressed){
-        document.querySelector("#about").click();buttonIsActivated = true;
+        document.querySelector("#about").click();buttonIsActivated = true;buttonIsActivated = true;
     }
-    setTimeout(() => {
-      requestAnimationFrame(gamepadProcessLoop);
-    }, 100);
     if(buttonIsActivated == true){
         return;
     }
@@ -178,23 +181,23 @@ function gamepadProcessLoop() {
   if (window.innerWidth <= 930) {
       // console.log(document.querySelector('html').scrollTop)
     document.querySelector('html').scrollTop =
-      ((Math.abs(mainpad.axes[3]) > 0.1) ? ((mainpad.axes[3]) ** 3) : 0) +
+      ((Math.abs(mainpad.axes[3]) > 0.1) ? ((mainpad.axes[3]) ** 3)*20 : 0) +
       document.querySelector('html').scrollTop;
-      setTimeout(() => {
-        requestAnimationFrame(gamepadProcessLoop);
-      }, 5);
-      return;
   } else {
       // console.log(rightElement.scrollTop)
     rightElement.scrollTop =
-      ((Math.abs(mainpad.axes[3]) > 0.1) ? ((mainpad.axes[3] ** 3)) : 0) +
+      ((Math.abs(mainpad.axes[3]) > 0.1) ? ((mainpad.axes[3] ** 3)*20) : 0) +
       rightElement.scrollTop;
-      setTimeout(() => {
-        requestAnimationFrame(gamepadProcessLoop);
-      }, 5);
-      return
+      
   }
-  next = requestAnimationFrame(gamepadProcessLoop);
+  
+  if(buttonIsActivated){
+    setTimeout(() => {
+      requestAnimationFrame(gamepadProcessLoop);
+    }, 100);
+  }else{
+    next = requestAnimationFrame(gamepadProcessLoop);
+  }
 }
 
 addEventListener("gamepadconnected", () => {
