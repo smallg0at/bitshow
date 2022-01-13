@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页-王润石</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.1.0-10/css/all.css" rel="stylesheet">
+    <style>
+        h1{
+            position: relative;
+            top:60px;
+        }
+        .hhh{
+            margin:0 auto;
+            position: relative;
+            top:60px;
+        }
+        body{
+            text-align: center; 
+            background-color: #00aff510;
+            
+            justify-content: center;
+            align-items: center;
+            
+        }
+        nav{
+            width:100%;
+            height:60px;
+            background: #4f4f4f;
+            position:absolute;
+            z-index:10;
+        }
+        nav ul{
+            list-style:none;
+            margin:0;
+            padding:0;
+        }
+        nav ul li{
+            text-align:center;
+            float:left;
+            line-height:60px;
+        }
+        nav ul li a{
+            width:120px;
+            color:#fff;
+            font-size:20px;
+            font-weight:600;
+            display:block;
+            text-decoration:none;
+        }
+        nav ul li a:hover,nav ul li a:visited{
+            text-decoration: none;
+            background: #00A2E9;
+            color:#fff;
+        }
+        .imgw{
+            position:relative;
+        }
+        
+        *{
+            padding: 0;
+            margin: 0;
+        }*
+        .gcs-footer{
+            margin-top: 20px;
+            background:#acacac;
+            width: 100%;
+            height: 165px;
+            text-align: center;
+            color: white;
+            position: absolute;
+            top:1000px;
+        }
+        .gcs-footer .footer-top{
+            margin-top: 50px;
+        }
+        .gcs-footer a{
+            color: #f0f1f1;
+            text-decoration: none;
+            padding: 0 10px;
+            vertical-align:middle;
+        }
+        .gcs-footer a:hover{
+            color: rgba(45, 75, 243, 0.856);
+            text-decoration: none;
+        }
+        .gcs-footer p{
+            height: 15px;
+            color: #6b6b6b;
+            margin-top: 30px;
+        }
+        #screen{
+            width:9999px;
+            height:9999px;
+            animation: 8s lbt infinite;
+        }
+        #screen img{
+            float:left;
+        }
+        #tv{
+            width:730px;
+            height:454px;
+            overflow: hidden;
+        }
+        @keyframes lbt{
+            0%{}
+            25%{transform: translateX(0px)}
+            30%{transform: translateX(-730px)}
+            50%{transform: translateX(-730px)}
+            55%{transform: translateX(-1460px)}
+            75%{transform: translateX(-1460px)}
+            80%{transform: translateX(-2190px)}
+            100%{transform: translateX(-2190px)}
+        }
+        .search-box{
+            height:40px;
+            background:gray;
+            padding:10px;
+            border-radius: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            top:200px;
+        }
+        .search-box .search-input{
+            background: none;
+            border:none;
+            outline:none;
+            color:white; 
+            font-size: 20px;
+            width:0px;
+            transition: 0.5s;
+        }
+        .search-box .search-btn{
+            width:40px;
+            height:40px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color:orange;
+            text-decoration: none;
+            font-size:20px;
+            border-radius: 50%;
+        }
+        .search-box:hover  .search-input{
+            width: 250px; 
+        }
+        .search-box:hover .search-btn{
+            background: white;
+     
+        }
+        .search-body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav>
+            <ul>
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="ziwojieshao.html">个人介绍</a></li>
+                <li><a href="更新历程.html">更新历程</a></li>
+                <li><a href="关于生活.html">About</a></li>
+                <li><a href="rb.html">勇士日报</a></li>
+            </ul>
+        </nav>
+    
+    </div>
+    <div id="tv" class="hhh">
+        <div id="screen">
+            <img src="img/1.jpg" height="454" width="730"/>
+            <img src="img/2.jpg" height="454" width="730"/>
+            <img src="img/3.jpg" height="454" width="730"/>
+            <img src="img/4.jpg" height="454" width="730"/>
+        </div>
+    </div>
+    <h1>哦！你竟然点进了这个网站</h1>
+    <div class="search-body">
+        <div class="search-box">
+            <input type="text" class="search-input">
+            <a href="#" class="search-btn">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </div>
+    <h3>一个搜索不了东西的搜索栏～～</h3>
+    <div class="gcs-footer">
+        <div class="footer-top">
+          <a href="https://chalk-c3.seiue.com">希悦</a> |
+          <a href="https://bdfzres.lexuewang.cn:8008/analyse/web/index.html#/login">成绩查询入口</a> |
+          <a href="https://www.chess.com/login">chess.com</a> |
+          <a href="https://pkuschool.yuque.com/dashboard">语雀</a> |
+          <a href="https://web.yammer.com/main/i.pkuschool.edu.cn/">yammar</a> |
+          <a href="https://www.bilibili.com">bilibili</a> |
+        </div>
+         <p>
+           @subit 2021 subit技术课版权所有 | 特别鸣谢：zwh lyc kjm gpf wzf zzq gx
+          </p>
+      </div>
+</body>
+</html>
+<!--style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F13470403511%2F1000.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642328061&t=ba3b40e4607c49653826dcc8959e20fa); background-size: cover;"
+<div class="imgw"> 
+            
+            <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F13470403511%2F1000.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642328061&t=ba3b40e4607c49653826dcc8959e20fa" alt="" width="100%">
+        </div>
+    
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'Poppin',sans-serif;
+        }
+        .search{
+            position:relative;
+            top:100px;
+            width:60px;
+            height:60px;
+            background: #fff;
+            border-radius: 60px;
+            transition: 0.5s;
+            box-shadow:0 0 0 5px #2573ef;
+            overflow: hidden;
+        }
+        .search.active{
+            width:360px;
+        }
+        .search.icon{
+            position:absolute;
+            top:0;
+            left:0;
+            width:60px;
+            height:60px;
+            background: #fff;
+            border-radius: 60px;
+            display:flex;
+            justify-content: cen ter;
+            align-items: center;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        .search.icon::before{
+            content: '';
+            position: absolute;
+            width:15px;
+            height:15px;
+            border:3px solid #287dfc;
+            border-radius: 50%;
+            transform: translate(-4px,-4px);
+        }
+        .search.icon::after{
+            content: '';
+            position: absolute;
+            width:3px;
+            height:12px;
+            background:#287dfc;
+            transform: translate(6px,6px) rotate(315deg);
+        }
+        .search .input{
+            position: relative;
+            width:300px;
+            height:60px;
+            left:60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search.input input{
+            position: absolute;
+            top:0;
+            width:100%;
+            height:100%;
+            border:none;
+            outline:none;
+            font-size: 18px;
+            padding:10px 0;
+        }
+        .clear{
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            width:15px;
+            height:15px;
+            right:15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .clear::before{
+            position: absolute;
+            content:'';
+            width:1px;
+            height:15px;
+            background: #999;
+            transform: rotate(45deg);
+        }
+        .clear::after{
+            position: absolute;
+            content:'';
+            width:1px;
+            height:15px;
+            background: #999;
+            transform: rotate(315deg);
+        }
+    
+    <div class="search">
+        <div class="icon"></div>
+        <div class="input">
+            <input type="text" placeholder="Search" id="mysearch">
+        </div>
+        <div>
+            <span class="clear" onclick="document.getELementById('mysearch').value=''"></span>
+        </div>
+    </div>
+    <script>
+        const icon=document.querySelector('.icon');
+        const search=document.querySelector('.search');
+        icon.onclick=function(){
+            search.classList.toggle('active')
+        }</script>
+        
+        display:flex;
+            justify-content: center;
+            min-height:100vh;->

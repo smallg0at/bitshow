@@ -16,5 +16,11 @@
         "url": "./projects/gaoxing/html/index.htm",
         "img": "./assets/siteshots/gaoxing.png",
         "loc": "1.7k"
+    },
+    {
+        "name": "王润石",
+        "url": "./projects/wangrunshi/index.html",
+        "img": "./assets/siteshots/wangrunshi.jpeg",
+        "loc": "1.2k"
     }
 ]
