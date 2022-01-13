@@ -1,0 +1,64 @@
+#screen
+{
+    width:9999px;
+    height: 9999px;
+    animation: 9s zzqnb infinite;
+}
+#screen img
+{    
+    float: left;
+}
+#tv
+{
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+@keyframes zzqnb
+{
+    0%{}
+    25%{transform: translateX(0px);}
+    30%{transform: translateX(-500px);}
+    60%{transform: translateX(-500px);}
+    65%{transform: translateX(-1000px);}
+    90%{transform: translateX(-1000px);}
+    95%{transform: translateX(-1500px);}
+    100%{transform: translateX(-1500px);}
+
+}
+.search-box
+{   
+    
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 40px;
+    border-radius: 40px;
+    padding:10px;
+    background: skyblue;
+}
+.search-btn
+{
+    float:right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.search-txt
+{
+    border:none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color:black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;   
+    width: 200px;
+}

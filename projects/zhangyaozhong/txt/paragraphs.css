@@ -1,0 +1,18 @@
+a.space{
+    margin-left:60px;
+    margin-right:60px;
+    display: inline;
+}
+.intro{
+    font-size: 19px;
+    color: rgb(224, 224, 224);
+}
+.intro-title{
+    font-size: 25px;
+    color: rgb(224, 224, 224);
+    font-style: italic;
+}
+article{
+    font-size: 10px;
+    color: rgb(224, 224, 224);
+}

@@ -1,0 +1,77 @@
+
+.box1{
+    position: relative;
+    top: -260px;
+    margin-bottom: 0;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 0px;
+}
+.box2{
+    position: relative;
+    top: -415px;
+    margin-top: 200px;
+    padding: 0px;
+    z-index: -1;
+}
+.box3{
+    margin-top: 60px;
+    padding: 0px;
+}
+.box4{
+    padding-left: 60px;
+    padding-top: 20px;
+    margin:0;
+    justify-content: flex-start;
+    align-items: space-around;
+}
+.box5{
+    margin-left: 50px;
+    padding-right: 200px;
+}
+div.box-footername{
+    width: 49%;
+    margin-top: 5px;
+    margin-left: 100px;
+    margin-right: 40px;
+}
+div.box-footer1{
+    position: relative;
+    top:-20px;
+    width: 49%;
+    margin-top: 2px;
+    margin-left: 250px;
+    margin-right: 100px;
+    display: block;
+}
+.boxintro{
+    position:relative;
+    top:-180px;
+    padding:20px;
+}
+.box-img1{
+    margin-top: 100px;
+    margin-left: 30%;
+    overflow: hidden;
+}
+.box-introduction{
+    position:relative;
+    top:60px;
+    padding:20px;
+    margin-bottom: 60px;
+}
+.boxarticles{
+    position:relative;
+    top:0px;
+    padding:20px;
+}
+.box-about{
+    padding-left: 30%;
+    padding-right: 30%;
+    margin: 5px;
+}
+.bordintro{
+    margin: 5px;
+    display: inline;
+    color: rgb(155, 153, 153);;
+}

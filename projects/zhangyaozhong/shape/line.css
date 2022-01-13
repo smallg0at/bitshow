@@ -1,0 +1,7 @@
+.line{
+    position: relative;
+    top: -280px;
+    height:1px;
+    width:800px;
+    border-top :2px solid  rgb(224, 224, 224);
+}

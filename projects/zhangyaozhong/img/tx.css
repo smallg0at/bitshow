@@ -1,0 +1,10 @@
+.txcircle{
+    border-radius:50%;
+    border: 3px solid rgb(192, 205, 209);
+    opacity:0.9
+}
+.heading{
+    position: absolute;
+    margin-top: 10px;
+    margin-left:10px;
+}

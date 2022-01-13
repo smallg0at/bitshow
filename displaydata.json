@@ -2,25 +2,37 @@
     {
         "name": "郭鹏飞",
         "url": "https://RedStoneGuo.github.io/RsGuoIntro_IV/",
-        "img": "./assets/siteshots/guopengfei.png",
+        "img": "guopengfei.png",
         "loc": "1.8k"
     },
     {
         "name": "康家鸣",
         "url": "https://kang-jiaming.github.io/Self-Introduction/",
-        "img": "./assets/siteshots/kangjiaming.png",
+        "img": "kangjiaming.png",
         "loc": "1.9k"
     },
     {
         "name": "高兴",
         "url": "./projects/gaoxing/html/index.htm",
-        "img": "./assets/siteshots/gaoxing.png",
+        "img": "gaoxing.png",
         "loc": "1.7k"
     },
     {
         "name": "王润石",
         "url": "./projects/wangrunshi/index.html",
-        "img": "./assets/siteshots/wangrunshi.jpeg",
+        "img": "wangrunshi.jpeg",
+        "loc": "1.2k"
+    },
+    {
+        "name": "周子强",
+        "url": "./projects/zhouziqiang/index.htm",
+        "img": "zhouziqiang.jpeg",
+        "loc": "0.8k"
+    },
+    {
+        "name": "张耀中",
+        "url": "./projects/zhangyaozhong/index.htm",
+        "img": "zhangyaozhong.png",
         "loc": "1.2k"
     }
 ]
