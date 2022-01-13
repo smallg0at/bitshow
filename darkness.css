@@ -18,4 +18,8 @@
         background-color: rgb(255, 255, 255) !important;
         filter: brightness(0.9);
     }
+    .card, .loading{
+        background-color: rgb(41, 41, 41) !important;
+    }
+
 }
