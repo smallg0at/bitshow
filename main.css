@@ -236,7 +236,7 @@ p{
     /* border-top: 1px solid gray; */
     overflow: hidden;
     margin: 0 40px;
-    background-color:white;
+    background-color:rgb(255, 255, 255);
     transition: .2s all;
     transform-origin: center center;
 }

@@ -42,7 +42,7 @@ function renderList() {
     newElement.classList.add("card");
     newElement.setAttribute("role", "button");
     newElement.setAttribute("tabindex", "0");
-    newElement.innerHTML = `<img src="${item.img}" alt="">
+    newElement.innerHTML = `<img src="./assets/siteshots/${item.img}" alt="">
         <span class="imglabel" title="代码行数">
             <span class="main">${item.name}</span>
             <span class="loc">${item.loc || "不明"}</span>
@@ -204,3 +204,7 @@ addEventListener("gamepadconnected", () => {
 //   document.querySelector(".padmouse").style.left =
 //     document.querySelector(".padmouse").clientLeft;
 });
+
+addEventListener("gamepaddisconnected", ()=>{
+  document.documentElement.classList.remove("gamepad");
+})
