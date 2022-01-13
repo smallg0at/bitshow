@@ -13,26 +13,32 @@
     },
     {
         "name": "高兴",
-        "url": "./projects/gaoxing/html/index.htm",
+        "url": "https://pkuschool.github.io/subitclass-pages/gaoxing/html/index.htm",
         "img": "gaoxing.png",
         "loc": "1.7k"
     },
     {
         "name": "王润石",
-        "url": "./projects/wangrunshi/index.html",
+        "url": "https://pkuschool.github.io/subitclass-pages/wangrunshi/index.html",
         "img": "wangrunshi.jpeg",
         "loc": "1.2k"
     },
     {
         "name": "周子强",
-        "url": "./projects/zhouziqiang/index.htm",
+        "url": "https://pkuschool.github.io/subitclass-pages/zhouziqiang/index.htm",
         "img": "zhouziqiang.jpeg",
         "loc": "0.8k"
     },
     {
         "name": "张耀中",
-        "url": "./projects/zhangyaozhong/index.htm",
+        "url": "https://pkuschool.github.io/subitclass-pages/zhangyaozhong/index.htm",
         "img": "zhangyaozhong.png",
         "loc": "1.2k"
+    },
+    {
+        "name": "吴建松",
+        "url": "https://pkuschool.github.io/subitclass-pages/wujiansong",
+        "img": "wujiansong.jpeg",
+        "loc": "1.0k"
     }
 ]
