@@ -158,7 +158,6 @@ function gamepadProcessLoop() {
     setTimeout(() => {
       requestAnimationFrame(gamepadProcessLoop);
     }, 300);
-    return;
   }
   if (!isFrameActivated) {
     
@@ -172,9 +171,6 @@ function gamepadProcessLoop() {
     }
     if (mainpad.buttons[13].pressed){
         document.querySelector("#about").click();buttonIsActivated = true;buttonIsActivated = true;
-    }
-    if(buttonIsActivated == true){
-        return;
     }
   }
   //   detectAndChangeFocusInList(mainpad)
@@ -193,10 +189,10 @@ function gamepadProcessLoop() {
   
   if(buttonIsActivated){
     setTimeout(() => {
-      requestAnimationFrame(gamepadProcessLoop);
+        requestAnimationFrame(gamepadProcessLoop);
     }, 100);
   }else{
-    next = requestAnimationFrame(gamepadProcessLoop);
+      next = requestAnimationFrame(gamepadProcessLoop);
   }
 }
 
