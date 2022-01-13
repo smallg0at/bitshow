@@ -155,15 +155,13 @@ function gamepadProcessLoop() {
   }
   if (mainpad.buttons[9].pressed && !isFrameActivated) {
     document.querySelector(".left").classList.toggle("collapse");
-    setTimeout(() => {
-      requestAnimationFrame(gamepadProcessLoop);
-    }, 300);
+    buttonIsActivated = true;
   }
   if (!isFrameActivated) {
     
     if (mainpad.buttons[15].pressed) {
-      document.activeElement.nextElementSibling.focus();
-      buttonIsActivated = true;
+      // document.activeElement.nextElementSibling.focus();
+      // buttonIsActivated = true;
     }
     if (mainpad.buttons[12].pressed){
         document.querySelector("#subit").click();buttonIsActivated = true;
@@ -174,17 +172,34 @@ function gamepadProcessLoop() {
     }
   }
   //   detectAndChangeFocusInList(mainpad)
-  if (window.innerWidth <= 930) {
-      // console.log(document.querySelector('html').scrollTop)
-    document.querySelector('html').scrollTop =
-      ((Math.abs(mainpad.axes[3]) > 0.1) ? ((mainpad.axes[3]) ** 3)*20 : 0) +
-      document.querySelector('html').scrollTop;
-  } else {
-      // console.log(rightElement.scrollTop)
-    rightElement.scrollTop =
-      ((Math.abs(mainpad.axes[3]) > 0.1) ? ((mainpad.axes[3] ** 3)*20) : 0) +
-      rightElement.scrollTop;
-      
+  if(isFrameActivated){
+    let frame = document.querySelector('iframe')
+    try {
+      if(frame.contentDocument){
+        frame.contentDocument.documentElement.scrollTop =
+          ((Math.abs(mainpad.axes[3]) > 0.1) ? ((mainpad.axes[3]) ** 3)*25 : 0) +
+          frame.contentDocument.documentElement.scrollTop;
+      }else{
+        console.info("iframeScrollFunctionBlocked")
+      }
+        // console.log(frame.contentDocument.documentElement.scrollTop)
+    } catch (error) {
+      console.error("iframeScrollFunctionError")
+    }
+    
+  }else{
+    if (window.innerWidth <= 930) {
+        // console.log(document.querySelector('html').scrollTop)
+      document.querySelector('html').scrollTop =
+        ((Math.abs(mainpad.axes[3]) > 0.1) ? ((mainpad.axes[3]) ** 3)*25 : 0) +
+        document.querySelector('html').scrollTop;
+    } else {
+        // console.log(rightElement.scrollTop)
+      rightElement.scrollTop =
+        ((Math.abs(mainpad.axes[3]) > 0.1) ? ((mainpad.axes[3] ** 3)*25) : 0) +
+        rightElement.scrollTop;
+        
+    }
   }
   
   if(buttonIsActivated){
