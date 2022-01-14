@@ -86,7 +86,11 @@ function openTargetedFrame(url, noFullscreen = false) {
   document.querySelector("iframe").src = url;
   toggleWebModal();
   if (noFullscreen == false) {
-    document.querySelector(".webframe").requestFullscreen();
+    if(document.documentElement.requestFullscreen){
+      document.querySelector(".webframe").requestFullscreen();
+    }else{
+      document.querySelector(".webframe").webkitRequestFullScreen();
+    }
   }
 }
 document.querySelector("#random").onclick = (e) => {
@@ -111,7 +115,11 @@ function sleep(numberMillis) {
 document.querySelector(".close-btn").onclick = () => {
   toggleWebModal();
   isFrameActivated = false;
-  document.exitFullscreen();
+  if(document.exitFullscreen){
+    document.exitFullscreen();
+  }else{
+    document.webkitCancelFullscreen();
+  }
   document.querySelector("iframe").src = "./assets/nothing.html";
 };
 
