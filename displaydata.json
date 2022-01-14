@@ -2,43 +2,60 @@
     {
         "name": "郭鹏飞",
         "url": "https://RedStoneGuo.github.io/RsGuoIntro_IV/",
-        "img": "guopengfei.png",
+        "img": "https://s2.loli.net/2022/01/14/esRQgBNhoz4tOSJ.png",
         "loc": "1.8k"
     },
     {
         "name": "康家鸣",
         "url": "https://kang-jiaming.github.io/Self-Introduction/",
-        "img": "kangjiaming.png",
+        "img": "https://s2.loli.net/2022/01/14/iu5ZtvmeP1WbLJX.png",
         "loc": "1.9k"
     },
     {
         "name": "高兴",
         "url": "https://pkuschool.github.io/subitclass-pages/gaoxing/html/index.htm",
-        "img": "gaoxing.png",
+        "img": "https://s2.loli.net/2022/01/14/3gj2UYDmzv4b9Eo.png",
         "loc": "1.7k"
     },
     {
         "name": "王润石",
         "url": "https://pkuschool.github.io/subitclass-pages/wangrunshi/index.html",
-        "img": "wangrunshi.jpeg",
+        "img": "https://s2.loli.net/2022/01/14/ijy73NdYEOlTSeR.jpg",
         "loc": "1.2k"
     },
     {
         "name": "周子强",
         "url": "https://pkuschool.github.io/subitclass-pages/zhouziqiang/index.htm",
-        "img": "zhouziqiang.jpeg",
+        "img": "https://s2.loli.net/2022/01/14/pZ8ewIY3A71EmaS.jpg",
         "loc": "0.8k"
     },
     {
         "name": "张耀中",
         "url": "https://pkuschool.github.io/subitclass-pages/zhangyaozhong/index.htm",
-        "img": "zhangyaozhong.png",
+        "img": "https://s2.loli.net/2022/01/14/pAjiWLVBzNn5DI3.png",
         "loc": "1.2k"
     },
     {
         "name": "吴建松",
         "url": "https://pkuschool.github.io/subitclass-pages/wujiansong",
-        "img": "wujiansong.jpeg",
+        "img": "https://s2.loli.net/2022/01/14/lgR9cbe3WsKjS2Y.jpg",
         "loc": "1.0k"
+    },{
+        "name": "谢睿伊",
+        "url": "https://pkuschool.github.io/subitclass-pages/xieruiyi",
+        "img": "https://s2.loli.net/2022/01/14/N9FWjxtCP1QnkMT.jpg",
+        "loc": "1.6k"
+    },
+    {
+        "name": "潘颜紫",
+        "url":"https://pkuschool.github.io/subitclass-pages/panyanzi/",
+        "img": "https://s2.loli.net/2022/01/14/qjOFanpErfg8um7.png",
+        "loc": "2.2k (!)"
+    },
+    {
+        "name": "吴方雨",
+        "url":"https://pkuschool.github.io/subitclass-pages/wufangyu/",
+        "img": "https://s2.loli.net/2022/01/14/VDHZhi24le1vFw5.png",
+        "loc": "0.7k"
     }
 ]
