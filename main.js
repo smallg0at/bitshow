@@ -99,7 +99,7 @@ function openTargetedFrame(url, noFullscreen = false) {
   isFrameActivated = true;
   document.querySelector("iframe").src = url;
   toggleWebModal();
-  if (noFullscreen == false) {
+  if (noFullscreen == false && !isInRatingsMode) {
     if(document.documentElement.requestFullscreen){
       document.querySelector(".webframe").requestFullscreen();
     }else{
