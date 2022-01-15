@@ -3,6 +3,14 @@ var currentDisplayedListData = [
     name: "waiting",
   },
 ];
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 function retrieveAndApplyData() {
   console.log("Retriving Data");
   var httpobj = new XMLHttpRequest();
@@ -11,9 +19,10 @@ function retrieveAndApplyData() {
     console.info(`Received Information, length is ${resText.length}`);
     if (resText != JSON.stringify(currentDisplayedListData)) {
       currentDisplayedListData = JSON.parse(resText);
+      shuffleArray(currentDisplayedListData)
       renderList();
     } else {
-      console.log();
+      console.log("Same!");
     }
   };
   httpobj.onabort = () => {

@@ -15,7 +15,7 @@
         "name": "高兴",
         "url": "https://pkuschool.github.io/subitclass-pages/gaoxing/html/index.htm",
         "img": "https://s2.loli.net/2022/01/14/3gj2UYDmzv4b9Eo.png",
-        "loc": "1.7k"
+        "loc": "1.8k"
     },
     {
         "name": "王润石",
@@ -57,5 +57,16 @@
         "url":"https://pkuschool.github.io/subitclass-pages/wufangyu/",
         "img": "https://s2.loli.net/2022/01/14/4qwapBxOzQU1nTs.png",
         "loc": "0.7k"
+    },
+    {
+        "name": "果立鸿",
+        "url": "https://pkuschool.github.io/subitclass-pages/guolihong/",
+        "img": "https://s2.loli.net/2022/01/15/X9mMWuSzJVdO7e3.jpg",
+        "loc": "0.4k"
+    },{
+        "name": "袁庚麒",
+        "url": "https://pkuschool.github.io/subitclass-pages/yuangengqi/main.html",
+        "img": "https://s2.loli.net/2022/01/15/eDUNEv9y8V34Z2u.jpg",
+        "loc": "1.6k"
     }
 ]
