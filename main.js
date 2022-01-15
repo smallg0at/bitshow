@@ -245,3 +245,12 @@ addEventListener("gamepadconnected", () => {
 addEventListener("gamepaddisconnected", ()=>{
   document.documentElement.classList.remove("gamepad");
 })
+
+// currentDisplayedListData
+function exportCurrentListAsID(){
+  var outStr = "";
+  currentDisplayedListData.forEach((item,index)=>{
+    outStr += `[${index+1}] ${item.name}\n`
+  })
+  console.log(outStr)
+}
