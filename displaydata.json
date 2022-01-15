@@ -50,7 +50,7 @@
         "name": "潘颜紫",
         "url":"https://pkuschool.github.io/subitclass-pages/panyanzi/",
         "img": "https://s2.loli.net/2022/01/14/tdiZeRafyoUpBzu.png",
-        "loc": "2.2k (!)"
+        "loc": "2.2k"
     },
     {
         "name": "吴方雨",
@@ -68,5 +68,11 @@
         "url": "https://pkuschool.github.io/subitclass-pages/yuangengqi/main.html",
         "img": "https://s2.loli.net/2022/01/15/eDUNEv9y8V34Z2u.jpg",
         "loc": "1.6k"
+    },
+    {
+        "name": "郑茗元",
+        "url": "https://pkuschool.github.io/subitclass-pages/zhengmingyuan/",
+        "img": "https://s2.loli.net/2022/01/15/ShX279jfomV4NQw.jpg",
+        "loc": "0.9k"
     }
 ]
