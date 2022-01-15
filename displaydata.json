@@ -124,5 +124,12 @@
         "img": "https://s2.loli.net/2022/01/16/g2XvIzLWi9aRtEU.jpg",
         "loc": "365",
         "delay": true
+    },
+    {
+        "name": "郭子琛（半成品）",
+        "url": "https://pkuschool.github.io/subitclass-pages/guozichen/",
+        "img": "",
+        "loc": "Unknown",
+        "delay": true
     }
 ]
