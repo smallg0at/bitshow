@@ -91,5 +91,31 @@
         "url": "https://pkuschool.github.io/subitclass-pages/weizifeng/",
         "img": "https://s2.loli.net/2022/01/15/Ww9Kd6qFoB3EpaZ.jpg",
         "loc": "1.5k"
+    },
+    {
+        "name": "王中吏",
+        "url": "https://pkuschool.github.io/subitclass-pages/wangzhongli/",
+        "img": "https://s2.loli.net/2022/01/15/XyFIQ9oV1glMjr5.jpg",
+        "loc": "365"
+    },
+    {
+        "name": "唐诗佳",
+        "url": "https://pkuschool.github.io/subitclass-pages/tangshijia/",
+        "img": "https://s2.loli.net/2022/01/15/9MvnVmcqDHK7Z5S.jpg",
+        "loc": "0.8k"
+    },
+    {
+        "name": "陈思远",
+        "url": "https://pkuschool.github.io/subitclass-pages/chensiyuan/index.htm",
+        "img": "https://s2.loli.net/2022/01/15/GoAyV4vueSBqDxl.jpg",
+        "loc": "366"
+    },
+    {
+        "name": "王诗羽",
+        "url": "https://pkuschool.github.io/subitclass-pages/wangshiyu/index.htm",
+        "img": "https://s2.loli.net/2022/01/15/uE2skX1Ig8jdASb.jpg",
+        "cloc": "644",
+        "delay": true,
+        "special": true
     }
 ]
