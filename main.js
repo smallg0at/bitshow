@@ -1,3 +1,6 @@
+
+const isInRatingsMode = confirm("您是否进入打分模式？")
+
 var currentDisplayedListData = [
   {
     name: "waiting",
@@ -19,7 +22,9 @@ function retrieveAndApplyData() {
     console.info(`Received Information, length is ${resText.length}`);
     if (resText != JSON.stringify(currentDisplayedListData)) {
       currentDisplayedListData = JSON.parse(resText);
-      shuffleArray(currentDisplayedListData)
+      if(!isInRatingsMode){
+        shuffleArray(currentDisplayedListData)
+      }
       renderList();
     } else {
       console.log("Same!");
@@ -43,7 +48,7 @@ function retrieveAndApplyData() {
 function renderList() {
   var cardContainer = document.querySelector(".card-container");
   cardContainer.innerHTML = "";
-  currentDisplayedListData.forEach((item) => {
+  currentDisplayedListData.forEach((item,index) => {
     let newElement = document.createElement("div");
     newElement.onclick = () => {
       openTargetedFrame(item.url);
@@ -53,7 +58,7 @@ function renderList() {
     newElement.setAttribute("tabindex", "0");
     newElement.innerHTML = `<img src="${item.img}" alt="">
         <span class="imglabel" title="代码行数">
-            <span class="main">${item.name}</span>
+            <span class="main">${(isInRatingsMode?("["+(index+1)+"] "):"")}${item.name}</span>
             <span class="loc">${item.loc || "不明"}</span>
         </span>`;
     cardContainer.appendChild(newElement);
