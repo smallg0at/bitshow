@@ -1,5 +1,5 @@
 
-const isInRatingsMode = confirm("您是否进入打分模式？")
+const isInRatingsMode = false
 
 var currentDisplayedListData = [
   {
@@ -49,19 +49,21 @@ function renderList() {
   var cardContainer = document.querySelector(".card-container");
   cardContainer.innerHTML = "";
   currentDisplayedListData.forEach((item,index) => {
-    let newElement = document.createElement("div");
-    newElement.onclick = () => {
-      openTargetedFrame(item.url);
-    };
-    newElement.classList.add("card");
-    newElement.setAttribute("role", "button");
-    newElement.setAttribute("tabindex", "0");
-    newElement.innerHTML = `<img src="${item.img}" alt="">
-        <span class="imglabel" title="代码行数">
-            <span class="main">${(isInRatingsMode?("["+(index+1)+"] "):"")}${item.name}</span>
-            <span class="loc">${item.loc || "不明"}</span>
-        </span>`;
-    cardContainer.appendChild(newElement);
+    if(!item.hidden){
+      let newElement = document.createElement("div");
+      newElement.onclick = () => {
+        openTargetedFrame(item.url);
+      };
+      newElement.classList.add("card");
+      newElement.setAttribute("role", "button");
+      newElement.setAttribute("tabindex", "0");
+      newElement.innerHTML = `<img src="${item.img}" alt="">
+          <span class="imglabel" title="代码行数">
+              <span class="main">${(isInRatingsMode?("["+(index+1)+"] "):"")}${item.name}</span>
+              <span class="loc">${item.loc || "不明"}</span>
+          </span>`;
+      cardContainer.appendChild(newElement);
+    }
   });
 }
 
@@ -247,10 +249,10 @@ addEventListener("gamepaddisconnected", ()=>{
 })
 
 // currentDisplayedListData
-function exportCurrentListAsID(){
+function exportCurrentListAsCSV(){
   var outStr = "";
   currentDisplayedListData.forEach((item,index)=>{
-    outStr += `[${index+1}] ${item.name}\n`
+    outStr += `${index+1},${item.name}\n`
   })
   console.log(outStr)
 }

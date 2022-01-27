@@ -11,25 +11,58 @@
             margin: 2em auto;
             background-color: rgb(31, 31, 31);
             color: rgba(255, 255, 255, 0.856);
-            line-height: 2;
+            line-height: 1.5;
             /* text-align: center; */
         }
-    </style>
+        .sect1{
+            text-align: center;
+            font-size: 22px;
+            margin: 60px 0;
+            line-height: 2;
+        }
+        .sect1 img{
+            border-radius: 15px;padding: 1em 6em;background-color: white;
+        }
+        .updlog{
+            column-count: 4;
+            column-width: 300px;
+            /* overflow-x: auto; */
+        }
+        @media screen and (max-width:800px) {
+            .sect1 img{
+                padding: 0 0;
+                max-width: 90vw;
+            }
+            .sect1{
+                font-size: 18px;
+                text-align: left;
+            }
+        }
+        </style>
 </head>
 <body>
-    <h1>关于课程</h1>
-    <p>此课程因对北京大学附属中学的爱而产生，希望在大泥湾魔法学校培养技术型、设计型、管理型人才。</p>
-    <p>参与人员：</p>
-    <ul>
-        <li>讲师：刘语辰、朱文鹤</li>
-        <li>企划：朱文鹤</li>
+    <div class="sect1">
+        <p><img src="./assets/logo0.jpg" alt="" width="300" style=""></p>
+        <!-- <h1>关于课程</h1> -->
+        <p>SubIT 技术课是 SubIT 荣誉社员<small>（兼2021届毕业生）</small>为了在校内培养有技术能力的综合性人才而设立的项目型技术课程。</p>
+        <p>课程主要教授 Python 和 Web 技术。</p>
+        <p>我们的课程在教授学生技术之余，也在项目构建之中培养学生的统筹管理能力、艺术审美能力。</p>
+        <p>此课程因对北京大学附属中学的爱而产生，希望在大泥湾魔法学校培养人才。</p>
+    </div>
+    <ul style="list-style-type: none;text-align: center;line-height: 2;">
+        <li>企划、讲师：<span title="这个人也写了社团官网">刘语辰</span>、<span title="这个人是设计/企划/管理的 leader">朱文鹤</span></li>
         <li>助教：刘宇宸、张子健</li>
-        <li>资源支持：SubIT 社团！</li>
+        <li>资源支持：SubIT 社团</li>
     </ul>
     <h1>关于此网页</h1>
     <p>设计、编程：刘语辰</p>
     <p>包含项目：技术课的同学们！</p>
     <h1>更新日志</h1>
+    <div class="updlog">
+            <h3>1.0.0</h3>
+    <ul>
+        <li>正式发布。</li>
+    </ul>
     <h3>0.6.5</h3>
     <ul>
         <li>增加了随机机制。</li>
@@ -76,5 +109,7 @@
     <ul>
         <li>加入了动态加载功能</li>
     </ul>
+
+    </div>
 </body>
 </html>

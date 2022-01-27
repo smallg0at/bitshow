@@ -62,7 +62,8 @@
         "name": "果立鸿",
         "url": "https://pkuschool.github.io/subitclass-pages/guolihong/",
         "img": "https://s2.loli.net/2022/01/15/X9mMWuSzJVdO7e3.jpg",
-        "loc": "0.4k"
+        "loc": "0.4k",
+        "hidden": true
     },{
         "name": "袁庚麒",
         "url": "https://pkuschool.github.io/subitclass-pages/yuangengqi/main.html",
@@ -130,7 +131,8 @@
         "url": "https://pkuschool.github.io/subitclass-pages/guozichen/",
         "img": "",
         "loc": "Unknown",
-        "delay": true
+        "delay": true,
+        "hidden": true
     },
     {
         "name": "俞智鑫",
